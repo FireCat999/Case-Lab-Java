@@ -1,8 +1,8 @@
 package org.example;
 
 class ListNode {
-    int val;          // Значение (данные) узла
-    ListNode next;    // Ссылка на следующий узел в списке
+    int val;          // Р—РЅР°С‡РµРЅРёРµ (РґР°РЅРЅС‹Рµ) СѓР·Р»Р°
+    ListNode next;    // РЎСЃС‹Р»РєР° РЅР° СЃР»РµРґСѓСЋС‰РёР№ СѓР·РµР» РІ СЃРїРёСЃРєРµ
 
     ListNode(int val) {
         this.val = val;
@@ -11,44 +11,44 @@ class ListNode {
 
 public class Task3 {
     public static void main(String[] args) {
-        // Создаем исходный односвязный список
+        // РЎРѕР·РґР°РµРј РёСЃС…РѕРґРЅС‹Р№ РѕРґРЅРѕСЃРІСЏР·РЅС‹Р№ СЃРїРёСЃРѕРє
         ListNode head = new ListNode(1);
         head.next = new ListNode(2);
         head.next.next = new ListNode(3);
         head.next.next.next = new ListNode(4);
 
-        System.out.println("Исходный список:");
+        System.out.println("РСЃС…РѕРґРЅС‹Р№ СЃРїРёСЃРѕРє:");
         printList(head);
 
-        // Инвертируем список
+        // РРЅРІРµСЂС‚РёСЂСѓРµРј СЃРїРёСЃРѕРє
         ListNode reversedHead = reverseList(head);
 
-        System.out.println("Инвертированный список:");
+        System.out.println("РРЅРІРµСЂС‚РёСЂРѕРІР°РЅРЅС‹Р№ СЃРїРёСЃРѕРє:");
         printList(reversedHead);
     }
 
-    // Метод для инверсии списка
+    // РњРµС‚РѕРґ РґР»СЏ РёРЅРІРµСЂСЃРёРё СЃРїРёСЃРєР°
     public static ListNode reverseList(ListNode head) {
-        ListNode prev = null;   // Предыдущий узел, изначально null
-        ListNode current = head; // Текущий узел, начинается с головного узла
+        ListNode prev = null;   // РџСЂРµРґС‹РґСѓС‰РёР№ СѓР·РµР», РёР·РЅР°С‡Р°Р»СЊРЅРѕ null
+        ListNode current = head; // РўРµРєСѓС‰РёР№ СѓР·РµР», РЅР°С‡РёРЅР°РµС‚СЃСЏ СЃ РіРѕР»РѕРІРЅРѕРіРѕ СѓР·Р»Р°
 
-        // Проходим по списку, меняя ссылки узлов
+        // РџСЂРѕС…РѕРґРёРј РїРѕ СЃРїРёСЃРєСѓ, РјРµРЅСЏСЏ СЃСЃС‹Р»РєРё СѓР·Р»РѕРІ
         while (current != null) {
-            ListNode nextTemp = current.next; // Временная переменная для хранения следующего узла
-            current.next = prev;              // Инвертируем ссылку текущего узла
-            prev = current;                   // Передвигаем prev на текущий узел
-            current = nextTemp;               // Передвигаем current на следующий узел
+            ListNode nextTemp = current.next; // Р’СЂРµРјРµРЅРЅР°СЏ РїРµСЂРµРјРµРЅРЅР°СЏ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ СЃР»РµРґСѓСЋС‰РµРіРѕ СѓР·Р»Р°
+            current.next = prev;              // РРЅРІРµСЂС‚РёСЂСѓРµРј СЃСЃС‹Р»РєСѓ С‚РµРєСѓС‰РµРіРѕ СѓР·Р»Р°
+            prev = current;                   // РџРµСЂРµРґРІРёРіР°РµРј prev РЅР° С‚РµРєСѓС‰РёР№ СѓР·РµР»
+            current = nextTemp;               // РџРµСЂРµРґРІРёРіР°РµРј current РЅР° СЃР»РµРґСѓСЋС‰РёР№ СѓР·РµР»
         }
 
-        return prev; // Новый головной узел списка (бывший последний узел)
+        return prev; // РќРѕРІС‹Р№ РіРѕР»РѕРІРЅРѕР№ СѓР·РµР» СЃРїРёСЃРєР° (Р±С‹РІС€РёР№ РїРѕСЃР»РµРґРЅРёР№ СѓР·РµР»)
     }
 
-    // Метод для вывода списка
+    // РњРµС‚РѕРґ РґР»СЏ РІС‹РІРѕРґР° СЃРїРёСЃРєР°
     public static void printList(ListNode head) {
         ListNode current = head;
         while (current != null) {
-            System.out.print(current.val + " "+(current.next == null ? "null":current.next.val) +"  "); // Выводим значение текущего узла
-            current = current.next;                                                                     // Переходим к следующему узлу
+            System.out.print(current.val + " "+(current.next == null ? "null":current.next.val) +"  "); // Р’С‹РІРѕРґРёРј Р·РЅР°С‡РµРЅРёРµ С‚РµРєСѓС‰РµРіРѕ СѓР·Р»Р°
+            current = current.next;                                                                     // РџРµСЂРµС…РѕРґРёРј Рє СЃР»РµРґСѓСЋС‰РµРјСѓ СѓР·Р»Сѓ
         }
         System.out.println();
     }
