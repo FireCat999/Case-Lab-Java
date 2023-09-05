@@ -5,12 +5,12 @@ public class Task2 {
         int a = 5;
         int b = 10;
 
-        System.out.println("До обмена: a = " + a + ", b = " + b);
+        System.out.println("Р”Рѕ РѕР±РјРµРЅР°: a = " + a + ", b = " + b);
 
         a = a + b;
         b = a - b;
         a = a - b;
 
-        System.out.println("После обмена: a = " + a + ", b = " + b);
+        System.out.println("РџРѕСЃР»Рµ РѕР±РјРµРЅР°: a = " + a + ", b = " + b);
     }
 }
